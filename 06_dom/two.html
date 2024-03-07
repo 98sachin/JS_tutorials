@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+    const divTag = document.createElement('div')
+    console.log(divTag);
+    divTag.className = "main";
+    divTag.id = Math.round(Math.random()*10+1)
+    // OR
+    // divTag.id = "mainID";
+    divTag.setAttribute('title','generateTitle');
+    divTag.style.backgroundColor='green'
+    divTag.style.padding='10px'
+    // ==================================
+    // divTag.innerText='Chai aur Code'
+    // the same could be done in other way
+    const addText = document.createTextNode("Chai aur Code")
+    divTag.appendChild(addText)
+    document.body.appendChild(divTag)
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language"><li>JavaScript</li></ul>
+</body>
+<script>
+function addLanguage(langName){
+    const liItem = document.createElement('li')
+    liItem.innerHTML=`${langName}`
+    document.querySelector('.language').appendChild(liItem)
+}
+addLanguage('python')
+// OR
+function addOptiLanguage(langName){
+    const liItem = document.createElement('li')
+    liItem.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(liItem)
+}
+addOptiLanguage('goLang')
+
+// Edit eg:1
+const secondLang = document.querySelector("li:nth-child(2)")
+// secondLang.innerHTML = "java"  // try to avoid this approach as its not optimized
+const newLi = document.createElement('li')
+newLi.textContent="Java";
+secondLang.replaceWith(newLi)
+
+//Edit eg:2
+const firstLang = document.querySelector('li:first-child')
+firstLang.outerHTML='<li>Typescript</li>'
+
+// remove
+const lastLang = document.querySelector('li:last-child');
+lastLang.remove();
+</script>
+</html>
