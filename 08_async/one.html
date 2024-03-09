@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // learning about some functions
+    // 1. setTimeout function : syntax= setTimeout(callbackfunction, time in miliseconds)
+    // setTimeout(function(){
+    //     console.log('hello Sachin')
+    // },2000)
+// or
+    const myVar = function(){
+        console.log("Hello Sachin")
+    }
+    const changeText = function(){
+        console.log(document.querySelector('h1').innerHTML="Best JS series");
+    }
+    const abc = setTimeout(changeText,2000)
+
+    // clearTimeout() is a function where if the code in the setTimeout() doesn't run within the allocated time then the clearTimeout() will eliminate the execution of setTimeout.
+    // clearTimeout(abc)
+// since here we have provided a button , lets add the clearTimeout() in that button.
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(abc);
+        console.log("stopped") // this stopped text msg can be seen in console of the browser.
+    })
+</script>
+</html>
