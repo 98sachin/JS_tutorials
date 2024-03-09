@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html | events</title>
+  </head>
+  <body style="background-color: black; color: aquamarine">
+    <h2>Amazing Images</h2>
+    <div class="div">
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="tiger"
+            src="https://www.hdwallpaper.nu/wp-content/uploads/2015/06/tigr-amurskiy-tigr-koshka.jpg"
+            alt="tiger_image"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="wolf"
+            src="https://th.bing.com/th/id/R.411db1eb205211ade0f359b5235933e8?rik=BosECABHSyDsJg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fqFLZr4d.jpg&ehk=yY1FvzOQdANghctHpn3ztO%2fl%2bXz3fQtUItxPhSHQgEU%3d&risl=&pid=ImgRaw&r=0"
+            alt="wolf_image"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="elephant"
+            src="https://th.bing.com/th/id/OIP.oxs5OTqgmJnBvVo5bDQcKAHaE5?rs=1&pid=ImgDetMain"
+            alt="elephant_image"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="peacock"
+            src="https://th.bing.com/th/id/OIP.0cU1Cb3_t1_iCPdhSbtbLwAAAA?rs=1&pid=ImgDetMain"
+            alt="peacock_image"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="lion"
+            src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/alpha-male-lion-howard-bagley.jpg"
+            alt="lion_image"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://2.bp.blogspot.com/-k5tSd-qTQps/UDjma7ZkyDI/AAAAAAAACzw/dfNJQqmolIY/s1600/Great+horned+owl+Bubo+virginianus.jpg"
+            alt="owl_image"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="parrot"
+            src="https://th.bing.com/th/id/R.d8fa52dd15af8f79975ac6a6abc3d83b?rik=Dg2gUEcgGg6DcQ&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f4%2f47%2fMale_Eclectus_Parrot.jpg&ehk=I9%2fkTnmBfZK1RWAqxEuVYlHoJHq%2fcoHdpzcL8eIlR94%3d&risl=&pid=ImgRaw&r=0"
+            alt="parrot_image"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="deer"
+            src="https://th.bing.com/th/id/OIP.qjNG_2qOIWzEzdDFNOpALwHaE6?rs=1&pid=ImgDetMain"
+            alt="deer_image"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="cobra"
+            src="https://th.bing.com/th/id/OIP.RME1zBjY1nKLGw_PyJoeKAHaEo?rs=1&pid=ImgDetMain"
+            alt="cobra_image"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="horse"
+            src="https://th.bing.com/th/id/R.d2a51e34dbf97a7eb6c7d13991314781?rik=PFqsS%2fKWSsj4RA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f8y1w2of.jpg&ehk=j%2bMIwU4XxLsz%2bJHN8G3A6TBwFotjrI7r1%2fVn7Y5IxC0%3d&risl=&pid=ImgRaw&r=0"
+            alt="horse_image"
+            onclick="alert('horse clicked')"
+          />
+        </li>
+        <li><a href="https://google.com" id="google">Google</a></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // all the events in JS always runs sequentially, some exceptions are there.
+
+    // people sometime directly on the html code put the "onClick", which is not a good practice in JS (however it can be done in React). It is not a good practice because its not feasible as when the application/website scales some problems might occur.
+    // therefor in JS we should not use the "onClick" feature in the HTML code. (it works , but not a good practice)
+
+    // instead follow the below code :- (2nd approach)
+    // document.getElementById("tiger").onclick = function () {
+    //   alert("tiger clicked");
+    // };
+
+    // the 2nd apprach is good than the 1st one, but there could occur some problem with the onClick event as it provides less features.
+    // Therefore we should use "EventListener" because it not only gives onClick event but also gives the ability of Propagation.
+
+    //The 3rd and the best approach :
+    // document.getElementById('tiger').addEventListener('click',function(){alert('tiger clicked')})
+
+    // different types of event that you need to study:
+    // type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY, altKey, ctrlKey, shiftKey, keyCode,
+
+    // document.getElementById('elephant').addEventListener('click', function(e){
+    //   console.log(e)
+    // },false) // it is false by default so we normally don't write it. This is event propagation. it can also be true (totally depends on use cases)
+
+    // there are two context of event propagation : (i) event bubbling , (ii) event capturing
+    // in market, most of the work is done through "default" i.e., "false" which is c/d "event bubbling".
+    // but in some cases we need to use "event capturing".
+
+    // Examples:-
+    // eg no.1:-
+    // document.getElementById('images').addEventListener('click', function(e){
+    //   console.log("clicked inside the ul")
+    // },false)
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //   console.log("owl clicked")
+    // },false)
+
+    // since the default activity is "false" so you can write the same code without false and it will work the same way.
+    // now try changing the "false" to "true"
+    // now the use of "false(default)" or "true" totally depends on the use case. If "capturing" or "bubbling" is more important.
+
+    // to stop the bubbling of the event:
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //   console.log("owl clicked")
+    //   e.stopPropagation()
+    // },false)
+    // in this way the bubbling of the inner element is stopped , so the outer element is seperated from the inner element.
+
+    // lets see the "preventDefault" method
+    // document.getElementById('google').addEventListener('click',function(e){
+    //   console.log('google clicked')
+    //   e.preventDefault();
+    // })
+    // the above code is by default a bubbling type.
+    // ==============================================================================
+
+    // Task: when you click any image the image should disappear.
+    
+    document.querySelector("#images").addEventListener('click', function(e){
+      // console.log(e)
+      // console.log(e.target)
+      // console.log(e.target.parentNode)
+      // let removeIt = e.target.parentNode;
+      // // 2 ways to remove (both are the same)
+      // // (i): the easy approach
+      // removeIt.remove()
+      // // (ii) : the complex one
+      // removeIt.parentNode.removeChild(removeIt);
+
+      console.log(e.target.tagName);
+      if(e.target.tagName==='IMG'){
+        console.log(e.target.id)
+        let removeIt = e.target.parentNode;
+        removeIt.remove()
+      }
+    })
+
+  </script>
+</html>
