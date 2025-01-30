@@ -1,4 +1,4 @@
-"use strict"
+"use strict"  //treat all the JS code as the newer version
 
 let a = "sachin"
 let b= 2
