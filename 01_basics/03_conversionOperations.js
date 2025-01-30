@@ -81,6 +81,14 @@
 // let h = console.log("3"+"3"-"3")
 // console.log(typeof h)
 
+// let myScore = 199;
+// myScore++   
+// ++myScore
+
+// let credits = 342;
+// credits--;
+// --credits
+
 
 console.log(true)
 console.log(+true)
