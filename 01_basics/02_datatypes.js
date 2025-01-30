@@ -7,7 +7,7 @@ let d;
 let e = null
 
 // Primitive Data types
-// number, bigint, string, boolean, null (standalone value), undefined, symbol
+// number, bigint, string, boolean, null (standalone value which is empty(i.e., not even 0, null is completely empty)), undefined, symbol
 
 // Non-primitive datatypes
 // Object
