@@ -21,8 +21,8 @@
 
 
 // ++++++++++++++++++++++++++++ MATHS ++++++++++++++++++++++++++++++++
-// console.log(Math);
-// console.log(Math.abs(-34)); // this changes the negative value to positive.
+// console.log(Math);  // print this in the console of the browser
+// console.log(Math.abs(-34)); // this changes the negative value to positive however the positive value stays +ve.
 // console.log(Math.round(23.89))
 // console.log(Math.ceil(5.1)); // this is cealing(i.e top) i.e it will choose the top/incremented value even if the value is slightly high.
 // console.log(Math.floor(5.9))
