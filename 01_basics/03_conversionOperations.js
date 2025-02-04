@@ -9,7 +9,7 @@
 // console.log(typeof score3);
 // console.log(typeof score4);
 
-// let valueInNumber = Number(score)
+// let valueInNumber = Number(score)  // converting the values into a number
 // console.log(valueInNumber)
 // console.log(typeof valueInNumber)
 
@@ -35,9 +35,14 @@
 // console.log( b)
 // 
 // let c = 'sachin'
-// let d = Boolean(c)
+// let d = Boolean(c)  // converting the value into a boolean
 // console.log(typeof d)
 // console.log(d)
+
+// let someNumber = 8;
+// let stringSomeSnumber = String(someNumber);  // converting the value into a string
+// console.log(typeof stringSomeSnumber);
+// console.log(stringSomeSnumber);
 
 // *************************OPERATIONS*******************************
 
