@@ -10,7 +10,7 @@
 // arr.push(7)  // adds the element to the last position
 // console.log(arr)
 
-// arr.pop() // no arguments needs to be add.removes the position from the last element
+// arr.pop() // no arguments needs to be added. removes the position from the last element
 // console.log(arr)
 
 // arr.unshift(0) // adds an element at the start, this is not the most used method
@@ -30,10 +30,10 @@
 
 // const abc = [23,45, 67,89,98,87,65]
 // console.log("A ", abc)
-// const myArr1 = console.log(abc.slice(1,4)) // prints the value in between 1 and 4 excluding 4's and 1's element
+// const myArr1 = console.log(abc.slice(1,4)) // prints the value in between 1 and 4 excluding 4th element
 
 // console.log("B ", abc)
-// const myArr2 = console.log(abc.splice(1,4))
+// const myArr2 = console.log(abc.splice(1,4))  // splice removes the elements from the original array and manippulates the original array. after using the splice method print the original array.
 
 // ======================================================================
 
@@ -64,7 +64,7 @@ const dc_heroes = ["superman", "batman", "flash"]
 // console.log(Array.from({name:"sachin"})) // interesting
 
 // converting multiple variables inot an array
-let a1 = 123
-let a2 = 1234
-let a3 = 12345
-console.log(Array.of(a1,a2,a3))
+  let a1 = 123
+  let a2 = 1234
+  let a3 = 12345
+  console.log(Array.of(a1,a2,a3))
