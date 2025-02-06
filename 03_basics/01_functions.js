@@ -1,4 +1,4 @@
-
+function functionName() {}; // this is the definition of a  function.
 
 function name() {
     console.log("S")
@@ -20,7 +20,7 @@ function fun1(num1, num2) {
     console.log(num1 + num2)
 }
 // fun1(2, 3)
-// fun1(22, 30)
+// fun1(22, "30")
 // fun1(22, "a")
 // fun1(22, null)
 
@@ -46,7 +46,7 @@ function loginUserMsg(username){
 // console.log(loginUserMsg())
 // console.log(loginUserMsg("sachin"))
 
-// you can also assign a value to a function in the parameter
+// you can also assign a default value to a function in the parameter
 function fun5(username="sam"){
     if(username===undefined){
         console.log("please enter a username");
