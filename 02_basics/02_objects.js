@@ -1,11 +1,18 @@
 //  there are two ways to declare an object 1. like literal 2. like constructor
 // when you create an object using a constructor it creates a SINGLETON object
 
+// const obj = {} // syntax of an object. one way to create an object.
+// the other way to create an object is shown below
+// Object.create // this is the way of creating object thorugh constructor method and sigleton is created in this.
+
+// Object is JS has a concept of keys and values.
+
 // 1. object literals
 
 // const mySymbol = Symbol("key01") // put this symbol in the object and print
 
 // const jsUsers = {name:"sachin","full name":"sachin sharma", [mySymbol]:"key01", age:26, email:"sadf@gsa.com", isLoggedIn: false, lastLogin:["monday","tuesday"]}
+
 // ways to access object
 // console.log(jsUsers.email)
 // console.log(jsUsers["email"])
@@ -46,15 +53,22 @@
 // const myObj = new Object() // this is a Singleton object
 // 2.
 // const myObj2 = {}; // this is not a singleton object
+// both gives the same value.
 
 const myUser = {};
-myUser.id = "234sff"
-myUser.username = 'jackSparrow'
-myUser.email = 'asdf@sa.com'
-myUser.password="asdf07908"
-myUser.isLoggedIn = false
+myUser.id = "234sff";
+myUser.username = 'jackSparrow';
+myUser.age = 25;
+myUser.email = 'asdf@sa.com';
+myUser.password="asdf07908";
+myUser.isLoggedIn = false;
 
 // console.log(myUser)
+// console.log(Object.keys(myUser));
+// console.log(Object.values(myUser));
+// console.log(Object.entries(myUser));
+// console.log(Object.assign({}, myUser));
+// console.log(Object.assign({}, myUser, { age: 30 }));
 
 const regularUser = {
     email:"aaser@sd.com",
@@ -104,8 +118,8 @@ const userObj = [
 // console.log(userObj[1].email)
 
 // console.log(myUser)
-// console.log(Object.keys(myUser)) // to get all the keys of an object
-// console.log(Object.values(myUser)) // to get all the values of an object
-// console.log(Object.entries(myUser)) // to get all the entries of an object
+// console.log(Object.keys(myUser)) // to get all the keys of an object, which is stored as an array
+// console.log(Object.values(myUser)) // to get all the values of an object, which is stored as an array
+// console.log(Object.entries(myUser)) // to get all the entries of an object, which is stored as an array inside an array
 console.log(myUser.hasOwnProperty("password"))
 console.log(myUser.hasOwnProperty("friendList"))
