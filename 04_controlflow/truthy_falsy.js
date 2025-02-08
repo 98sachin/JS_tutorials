@@ -36,6 +36,7 @@ const userEmail2 = [] // empty array
 // all the other values are truthy values.
 
 // Truthy Values that surprises you : "0", "false", " ", [], {}, function(){}(this is c/d an empty function), 
+// Anything that is in a string format (or inside quotes/inverted commas) are truthy values.
 
 // false == 0 gives true
 // false =="" gives true
