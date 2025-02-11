@@ -32,7 +32,7 @@ cap.set("uae", "United Arab Emirates")
 // cap1.set("ind", "India")
 // cap1.set("usa", "United States of America")
 // cap1.set("uae", "United Arab Emirates")
-// cap1.set("ind", "India")  // map method does not duplicates the entries.
+// cap1.set("ind", "India")  // map method does not duplicates the entries, it is known to have/print unique values.
 // console.log(cap1)
 
 // if we apply for of loop on map()
@@ -56,6 +56,7 @@ const myObj = {
 // console.log(myResult)
 // }
 // the above forof loop doesn't work because here the object is not iterable. There is a different way to iterate an object.
+// Maps are iterable however Objects are not iterable.
 
 // =======================================================================================================================
 
