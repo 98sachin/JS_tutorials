@@ -12,14 +12,16 @@
 function addLanguage(langName){
     const liItem = document.createElement('li')
     liItem.innerHTML=`${langName}`
-    document.querySelector('.language').appendChild(liItem)
+    document.querySelector('.language').appendChild(liItem) // attaching it to the document
 }
-addLanguage('python')
+addLanguage('python') // the no. of times this method is called that many no. of times it traverse the whole DOM tree.
+    // above is the very basic way and not an optimized way. as whenever we try to add a language here it will traverse the whole DOM tree. This may sometimes results is optimization issues.
 // OR
+    // adding language in more optimized way, generally used in large scale projects.
 function addOptiLanguage(langName){
     const liItem = document.createElement('li')
     liItem.appendChild(document.createTextNode(langName))
-    document.querySelector('.language').appendChild(liItem)
+    document.querySelector('.language').appendChild(liItem) // attaching it to the document
 }
 addOptiLanguage('goLang')
 
